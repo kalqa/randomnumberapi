@@ -13,5 +13,5 @@ RUN apk add --update git nano gcc musl-dev openrc \
     && pip install gevent \
     && dos2unix startup.sh
 
-EXPOSE 8080
+EXPOSE 9090
 CMD ["/startup.sh"]
