@@ -1,5 +1,5 @@
 #!/bin/sh
 
-git clone https://github.com/jameskozlowski/randomnumberapi.git /home/randomnumberapi
+git clone -b to_deploy https://github.com/kalqa/randomnumberapi.git /home/randomnumberapi
 
 python3 /home/randomnumberapi/api.py
