@@ -2,7 +2,7 @@ FROM python:3.6.5-alpine3.7
 
 ENV PYTHONUNBUFFERED 1
 
-COPY startup.sh /startup.sh
+COPY ./startup.sh ./startup.sh
 
 RUN apk add --update git nano gcc musl-dev openrc \
     && rm -f /var/cache/apk/* \
@@ -13,5 +13,5 @@ RUN apk add --update git nano gcc musl-dev openrc \
     && pip install gevent \
     && dos2unix startup.sh
 
-EXPOSE 9090
+EXPOSE 8080
 CMD ["/startup.sh"]
